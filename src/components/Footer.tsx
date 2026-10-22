@@ -15,10 +15,15 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-200 dark:border-slate-800">
           
-          {/* Brand & Monogram */}
+          {/* Brand & Photo Avatar */}
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-indigo-600 flex items-center justify-center text-white font-bold text-lg shadow-md shadow-cyan-500/20">
-              TM
+            <div className="relative w-10 h-10 rounded-xl overflow-hidden ring-2 ring-cyan-500/80 shadow-md shadow-cyan-500/20 flex-shrink-0 bg-slate-800">
+              <img
+                src="/assets/profile/formal-headshot.webp"
+                alt="Teofilo Mirasol Jr."
+                className="w-full h-full object-cover object-top"
+                loading="lazy"
+              />
             </div>
             <div>
               <h4 className="font-bold text-slate-900 dark:text-white text-base">

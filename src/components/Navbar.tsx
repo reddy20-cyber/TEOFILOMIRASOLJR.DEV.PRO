@@ -43,8 +43,13 @@ export const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
           href="#"
           className="flex items-center gap-2.5 group focus:outline-none focus:ring-2 focus:ring-cyan-400 rounded-xl"
         >
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-indigo-600 flex items-center justify-center text-white font-bold text-lg shadow-md shadow-cyan-500/25 group-hover:scale-105 transition-transform">
-            TM
+          <div className="relative w-10 h-10 rounded-xl overflow-hidden ring-2 ring-cyan-500/80 shadow-md shadow-cyan-500/25 group-hover:scale-105 group-hover:ring-cyan-400 transition-all flex-shrink-0 bg-slate-800">
+            <img
+              src="/assets/profile/formal-headshot.webp"
+              alt="Teofilo Mirasol Jr."
+              className="w-full h-full object-cover object-top"
+              loading="eager"
+            />
           </div>
           <div className="flex flex-col">
             <span className="font-bold text-base tracking-tight text-slate-900 dark:text-white group-hover:text-cyan-500 transition-colors">

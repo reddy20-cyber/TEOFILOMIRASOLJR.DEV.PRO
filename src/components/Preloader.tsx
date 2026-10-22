@@ -23,9 +23,13 @@ export const Preloader: React.FC<{ onComplete: () => void }> = ({ onComplete }) 
         <div className="absolute w-24 h-24 rounded-full border-2 border-cyan-500/20 border-t-cyan-400 animate-spin" />
         <div className="absolute w-28 h-28 rounded-full border border-indigo-500/10 border-b-indigo-400 animate-spin-slow" />
         
-        {/* Center Logo */}
-        <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-500 to-indigo-600 flex items-center justify-center font-black text-2xl tracking-tight shadow-[0_0_30px_rgba(6,182,212,0.5)]">
-          TM
+        {/* Center Avatar */}
+        <div className="relative w-16 h-16 rounded-2xl overflow-hidden ring-2 ring-cyan-400 shadow-[0_0_35px_rgba(6,182,212,0.6)] bg-slate-800">
+          <img
+            src="/assets/profile/formal-headshot.webp"
+            alt="Teofilo Mirasol Jr."
+            className="w-full h-full object-cover object-top"
+          />
         </div>
       </div>
 
