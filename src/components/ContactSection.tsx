@@ -232,7 +232,7 @@ export const ContactSection: React.FC = () => {
 
   return (
     <section id="contact" className="py-20 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
@@ -254,7 +254,7 @@ export const ContactSection: React.FC = () => {
           <div className="lg:col-span-5 space-y-6">
             
             {/* Freelance Status Box */}
-            <div className="p-6 rounded-2xl bg-white dark:bg-[#111726] border border-slate-200 dark:border-slate-800 shadow-xl space-y-3">
+            <div className="p-6 rounded-2xl bento-card shadow-xl space-y-3">
               <div className="flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping" />
                 <h3 className="font-bold text-slate-900 dark:text-white text-base">
@@ -279,7 +279,7 @@ export const ContactSection: React.FC = () => {
               {contacts.map((c) => (
                 <div
                   key={c.email}
-                  className="p-4 rounded-xl bg-white dark:bg-[#111726] border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-3 hover:border-cyan-500/40 transition-colors"
+                  className="p-4 rounded-xl bento-card shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-3 hover:border-cyan-500/40 transition-colors"
                 >
                   <div className="space-y-0.5">
                     <span className="text-[11px] font-semibold text-cyan-600 dark:text-cyan-400 block">
@@ -320,7 +320,7 @@ export const ContactSection: React.FC = () => {
             </div>
 
             {/* Direct Phone / SMS Card */}
-            <div className="p-4 rounded-xl bg-white dark:bg-[#111726] border border-slate-200 dark:border-slate-800 shadow-sm flex items-center justify-between gap-3">
+            <div className="p-4 rounded-xl bento-card shadow-sm flex items-center justify-between gap-3">
               <div className="flex items-center gap-3">
                 <div className="p-2.5 rounded-lg bg-emerald-500/10 text-emerald-500">
                   <Phone className="w-4 h-4" />
@@ -351,7 +351,7 @@ export const ContactSection: React.FC = () => {
 
           {/* Right Column: Full Contact Form with Message + File Upload */}
           <div className="lg:col-span-7">
-            <div className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#111726] border border-slate-200 dark:border-slate-800 shadow-2xl space-y-6">
+            <div className="p-6 sm:p-8 rounded-2xl bento-card shadow-2xl space-y-6">
               
               <div>
                 <h3 className="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
@@ -425,7 +425,7 @@ export const ContactSection: React.FC = () => {
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       placeholder="e.g. John Doe / Municipal Director"
-                      className="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all"
+                      className="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-white/[0.1] text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all"
                     />
                   </div>
 
@@ -441,7 +441,7 @@ export const ContactSection: React.FC = () => {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="e.g. you@example.com"
-                      className="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all"
+                      className="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-white/[0.1] text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all"
                     />
                   </div>
                 </div>
@@ -457,7 +457,7 @@ export const ContactSection: React.FC = () => {
                     value={subject}
                     onChange={(e) => setSubject(e.target.value)}
                     placeholder="e.g. Inquiring about a civic database system / microservices development"
-                    className="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all"
+                    className="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-white/[0.1] text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all"
                   />
                 </div>
 
@@ -479,7 +479,7 @@ export const ContactSection: React.FC = () => {
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     placeholder="Tell me about your system requirements, timeline, and goals..."
-                    className="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all resize-y"
+                    className="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-white/[0.1] text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all resize-y"
                   />
                 </div>
 

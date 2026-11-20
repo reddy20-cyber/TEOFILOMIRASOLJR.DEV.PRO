@@ -14,17 +14,17 @@ export const Preloader: React.FC<{ onComplete: () => void }> = ({ onComplete }) 
 
   return (
     <div
-      className={`fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#0a0d14] text-white transition-opacity duration-500 ease-out ${
+      className={`fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#18161d] text-white transition-opacity duration-500 ease-out ${
         fade ? 'opacity-0 pointer-events-none' : 'opacity-100'
       }`}
     >
       <div className="relative flex items-center justify-center">
         {/* Glowing orbital ring */}
-        <div className="absolute w-24 h-24 rounded-full border-2 border-cyan-500/20 border-t-cyan-400 animate-spin" />
-        <div className="absolute w-28 h-28 rounded-full border border-indigo-500/10 border-b-indigo-400 animate-spin-slow" />
+        <div className="absolute w-24 h-24 rounded-full border-2 border-white/10 border-t-amber-300 animate-spin" />
+        <div className="absolute w-28 h-28 rounded-full border border-white/5 border-b-rose-400 animate-spin-slow" />
         
         {/* Center Avatar */}
-        <div className="relative w-16 h-16 rounded-2xl overflow-hidden ring-2 ring-cyan-400 shadow-[0_0_35px_rgba(6,182,212,0.6)] bg-slate-800">
+        <div className="relative w-16 h-16 rounded-2xl overflow-hidden ring-2 ring-white/30 shadow-[0_0_35px_rgba(245,185,66,0.35)] bg-zinc-900">
           <img
             src="/assets/profile/formal-headshot.webp"
             alt="Teofilo Mirasol Jr."
@@ -34,8 +34,8 @@ export const Preloader: React.FC<{ onComplete: () => void }> = ({ onComplete }) 
       </div>
 
       <div className="mt-6 flex flex-col items-center gap-1">
-        <span className="text-sm font-semibold tracking-widest uppercase text-cyan-400">Teofilo Mirasol Jr.</span>
-        <span className="text-xs text-slate-400">Loading portfolio experience...</span>
+        <span className="text-sm font-semibold tracking-widest uppercase text-amber-300">Teofilo Mirasol Jr.</span>
+        <span className="text-xs text-zinc-400">Loading portfolio experience...</span>
       </div>
     </div>
   );

@@ -49,8 +49,8 @@ export const CertificatesSection: React.FC<CertificatesSectionProps> = ({
   };
 
   return (
-    <section id="certificates" className="py-20 relative bg-slate-100/60 dark:bg-[#0c101a]/70 border-t border-slate-200/80 dark:border-slate-800/80">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="certificates" className="py-20 relative bg-slate-100/60 dark:bg-[#1c1922]/70 border-t border-slate-200/80 dark:border-white/[0.1]/80">
+      <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
@@ -74,8 +74,8 @@ export const CertificatesSection: React.FC<CertificatesSectionProps> = ({
               onClick={() => setFilter(opt.value)}
               className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
                 filter === opt.value
-                  ? 'bg-gradient-to-r from-cyan-500 to-indigo-600 text-white shadow-md shadow-cyan-500/20 scale-105'
-                  : 'bg-white dark:bg-[#111726] text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800'
+                  ? 'bg-zinc-900 dark:bg-white text-white dark:text-zinc-950 shadow-lg scale-105'
+                  : 'bg-white/80 dark:bg-white/[0.06] backdrop-blur-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-white/[0.1]'
               }`}
             >
               {opt.label}
@@ -89,7 +89,7 @@ export const CertificatesSection: React.FC<CertificatesSectionProps> = ({
             <TiltCard key={cert.id} maxTilt={6}>
               <div
                 onClick={() => handleOpenLightbox(cert)}
-                className="cursor-pointer h-full flex flex-col justify-between rounded-2xl bg-white dark:bg-[#111726] border border-slate-200 dark:border-slate-800 shadow-md hover:shadow-xl hover:border-cyan-500/50 transition-all overflow-hidden group"
+                className="cursor-pointer h-full flex flex-col justify-between rounded-2xl bento-card shadow-md hover:shadow-xl hover:border-cyan-500/50 transition-all overflow-hidden group"
               >
                 {/* Certificate Preview Image */}
                 <div className="relative h-56 bg-slate-950 flex items-center justify-center p-3 overflow-hidden">
@@ -126,7 +126,7 @@ export const CertificatesSection: React.FC<CertificatesSectionProps> = ({
                     </p>
                   </div>
 
-                  <div className="pt-2 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
+                  <div className="pt-2 border-t border-slate-100 dark:border-white/[0.1]/80 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
                     <span className="flex items-center gap-1">
                       <Calendar className="w-3.5 h-3.5" />
                       {cert.date}

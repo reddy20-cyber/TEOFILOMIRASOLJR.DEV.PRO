@@ -13,6 +13,60 @@
   }
 }
 
+/* Warm Dark Frosted Glassmorphism Theme Canvas */
+.bento-canvas {
+  background-color: #f4f2f6;
+  background-image:
+    radial-gradient(circle at 12% 10%, rgba(168, 130, 255, 0.14), transparent 40%),
+    radial-gradient(circle at 85% 15%, rgba(251, 146, 60, 0.10), transparent 38%),
+    radial-gradient(circle at 50% 85%, rgba(56, 189, 248, 0.10), transparent 45%);
+}
+
+.dark .bento-canvas {
+  background-color: #18161d;
+  background-image:
+    radial-gradient(ellipse 65% 50% at 18% 8%, rgba(110, 88, 128, 0.34), transparent 65%),
+    radial-gradient(ellipse 55% 45% at 86% 14%, rgba(130, 96, 86, 0.24), transparent 60%),
+    radial-gradient(ellipse 60% 50% at 50% 92%, rgba(72, 66, 92, 0.28), transparent 65%);
+}
+
+/* Signature Frosted Glass Bento Card */
+.bento-card {
+  @apply rounded-[28px] border transition-all duration-300;
+  background: rgba(255, 255, 255, 0.78);
+  border-color: rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.06);
+}
+
+.dark .bento-card {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.085) 0%, rgba(255, 255, 255, 0.04) 100%);
+  border-color: rgba(255, 255, 255, 0.11);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.dark .bento-card:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+/* Nested Glass Row / Strip */
+.bento-row {
+  @apply rounded-2xl border transition-all duration-200;
+  background: rgba(255, 255, 255, 0.65);
+  border-color: rgba(15, 23, 42, 0.07);
+}
+
+.dark .bento-row {
+  background: rgba(255, 255, 255, 0.055);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark .bento-row:hover {
+  background: rgba(255, 255, 255, 0.095);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
 /* Custom modern scrollbars */
 ::-webkit-scrollbar {
   width: 8px;
@@ -20,21 +74,20 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0d14;
+  background: #141218;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
-  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #06b6d4;
+  background: rgba(255, 255, 255, 0.32);
 }
 
-/* Glassmorphism utility */
 .glass {
-  background: rgba(17, 23, 38, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(28, 25, 34, 0.72);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
 }

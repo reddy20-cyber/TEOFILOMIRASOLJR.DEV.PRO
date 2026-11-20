@@ -52,7 +52,7 @@ export function App() {
   };
 
   return (
-    <div className="relative min-h-screen bg-slate-50 dark:bg-[#0a0d14] text-slate-900 dark:text-slate-100 transition-colors duration-300">
+    <div className="bento-canvas relative min-h-screen text-zinc-900 dark:text-zinc-100 transition-colors duration-300">
       {/* Animated initial preloader */}
       {loading && <Preloader onComplete={() => setLoading(false)} />}
 
@@ -62,27 +62,29 @@ export function App() {
       {/* Desktop Custom Cursor */}
       <CustomCursor />
 
-      {/* Main Navigation */}
+      {/* Floating Left Sidebar + Top Dashboard Bar */}
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 
-      {/* Main Sections */}
-      <main>
-        <HeroSection />
-        <AboutSection />
-        <ExperienceSection onOpenCert={handleOpenCertificate} />
-        <ProjectsSection />
-        <SkillsSection />
-        <CertificatesSection
-          activeCertId={targetCertId}
-          onClearActiveCert={() => setTargetCertId(null)}
-        />
-        <BadgesSection />
-        <GallerySection />
-        <ContactSection />
-      </main>
+      {/* Main Sections shifted right for Desktop Floating Sidebar */}
+      <div className="lg:pl-[88px] xl:pl-[96px]">
+        <main>
+          <HeroSection />
+          <AboutSection />
+          <ExperienceSection onOpenCert={handleOpenCertificate} />
+          <ProjectsSection />
+          <SkillsSection />
+          <CertificatesSection
+            activeCertId={targetCertId}
+            onClearActiveCert={() => setTargetCertId(null)}
+          />
+          <BadgesSection />
+          <GallerySection />
+          <ContactSection />
+        </main>
 
-      {/* Footer */}
-      <Footer />
+        {/* Footer */}
+        <Footer />
+      </div>
     </div>
   );
 }

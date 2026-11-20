@@ -11,8 +11,8 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-[#080b12] text-slate-600 dark:text-slate-400 py-12 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="border-t border-zinc-200/80 dark:border-white/[0.08] bg-white/60 dark:bg-[#131117]/80 backdrop-blur-2xl text-zinc-600 dark:text-zinc-400 py-10 relative">
+      <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-200 dark:border-slate-800">
           
           {/* Brand & Photo Avatar */}

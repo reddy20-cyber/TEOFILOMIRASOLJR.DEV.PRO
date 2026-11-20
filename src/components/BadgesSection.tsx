@@ -8,7 +8,7 @@ export const BadgesSection: React.FC = () => {
 
   return (
     <section id="badges" className="py-20 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
@@ -29,10 +29,10 @@ export const BadgesSection: React.FC = () => {
           {badges.map((badge) => (
             <TiltCard key={badge.id} maxTilt={8} scale={1.03}>
               <div
-                className={`h-full flex flex-col justify-between p-6 rounded-2xl bg-white dark:bg-[#111726] border shadow-xl relative overflow-hidden transition-all group ${
+                className={`h-full flex flex-col justify-between p-6 rounded-2xl bg-white/80 dark:bg-white/[0.06] backdrop-blur-xl border shadow-xl relative overflow-hidden transition-all group ${
                   badge.isPlaceholder
                     ? 'border-dashed border-purple-400/60 dark:border-purple-500/40'
-                    : 'border-slate-200 dark:border-slate-800 hover:border-cyan-500/50'
+                    : 'border-slate-200 dark:border-white/[0.1] hover:border-cyan-500/50'
                 }`}
               >
                 {/* Subtle colored glow behind badge */}
@@ -103,7 +103,7 @@ export const BadgesSection: React.FC = () => {
                 </div>
 
                 {/* Footer Link / Verification */}
-                <div className="pt-5 mt-4 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-center">
+                <div className="pt-5 mt-4 border-t border-slate-100 dark:border-white/[0.1]/80 flex items-center justify-center">
                   {badge.verifyUrl ? (
                     <a
                       href={badge.verifyUrl}

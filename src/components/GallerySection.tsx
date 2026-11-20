@@ -8,8 +8,8 @@ export const GallerySection: React.FC = () => {
   const [activePhoto, setActivePhoto] = useState<GalleryPhoto | null>(null);
 
   return (
-    <section id="gallery" className="py-20 relative bg-slate-100/60 dark:bg-[#0c101a]/70 border-t border-slate-200/80 dark:border-slate-800/80">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="gallery" className="py-20 relative bg-slate-100/60 dark:bg-[#1c1922]/70 border-t border-slate-200/80 dark:border-white/[0.1]/80">
+      <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
@@ -31,7 +31,7 @@ export const GallerySection: React.FC = () => {
             <TiltCard key={photo.id} maxTilt={6}>
               <div
                 onClick={() => setActivePhoto(photo)}
-                className="cursor-pointer group relative rounded-2xl overflow-hidden bg-slate-900 shadow-md hover:shadow-2xl border border-slate-200 dark:border-slate-800 transition-all"
+                className="cursor-pointer group relative rounded-2xl overflow-hidden bg-slate-900 shadow-md hover:shadow-2xl border border-slate-200 dark:border-white/[0.1] transition-all"
               >
                 {/* Photo Image */}
                 <div className="h-64 sm:h-72 w-full overflow-hidden">

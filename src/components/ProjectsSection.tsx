@@ -14,33 +14,33 @@ export const ProjectsSection: React.FC = () => {
     : projects.filter((p) => p.category === activeCategory || p.tags.includes(activeCategory));
 
   return (
-    <section id="projects" className="py-20 relative bg-slate-100/50 dark:bg-[#0c101a]/50 border-t border-slate-200/80 dark:border-slate-800/80">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="py-16 relative">
+      <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
-          <span className="text-xs uppercase tracking-widest font-bold text-cyan-600 dark:text-cyan-400">
+        <div className="text-center max-w-3xl mx-auto mb-10 space-y-3">
+          <span className="text-xs uppercase tracking-widest font-bold text-amber-600 dark:text-amber-300">
             Portfolio Showcase
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-white tracking-tight">
             Featured Systems & Engineering Projects
           </h2>
-          <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400">
+          <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400">
             Real enterprise software, civic tech infrastructure, and academic innovation.
           </p>
-          <div className="w-16 h-1 bg-gradient-to-r from-cyan-500 to-indigo-500 mx-auto rounded-full" />
+          <div className="w-16 h-1 bg-gradient-to-r from-amber-300 to-rose-400 mx-auto rounded-full" />
         </div>
 
         {/* Filter Pills */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
+        <div className="flex flex-wrap items-center justify-center gap-2 mb-10">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
+              className={`px-4 py-2 rounded-2xl text-xs sm:text-sm font-semibold transition-all ${
                 activeCategory === cat
-                  ? 'bg-gradient-to-r from-cyan-500 to-indigo-600 text-white shadow-md shadow-cyan-500/20 scale-105'
-                  : 'bg-white dark:bg-[#111726] text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800'
+                  ? 'bg-zinc-900 dark:bg-white text-white dark:text-zinc-950 shadow-lg scale-105'
+                  : 'bg-white/75 dark:bg-white/[0.06] text-zinc-700 dark:text-zinc-300 hover:bg-white dark:hover:bg-white/[0.12] border border-zinc-200 dark:border-white/[0.1]'
               }`}
             >
               {cat}
@@ -49,10 +49,10 @@ export const ProjectsSection: React.FC = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProjects.map((project) => (
             <TiltCard key={project.id} maxTilt={6}>
-              <div className="h-full flex flex-col justify-between rounded-2xl bg-white dark:bg-[#111726] border border-slate-200 dark:border-slate-800 shadow-xl overflow-hidden group hover:border-cyan-500/50 transition-colors">
+              <div className="bento-card h-full flex flex-col justify-between overflow-hidden group">
                 
                 {/* Image Header with Badge */}
                 <div className="relative h-48 bg-slate-900 overflow-hidden">

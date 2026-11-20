@@ -71,7 +71,7 @@ export const CertificateLightbox: React.FC<CertificateLightboxProps> = ({
       onClick={onClose}
     >
       <div
-        className="relative flex flex-col lg:flex-row w-full max-w-5xl max-h-[92vh] bg-white dark:bg-[#111726] rounded-2xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800"
+        className="relative flex flex-col lg:flex-row w-full max-w-5xl max-h-[92vh] bg-white/80 dark:bg-white/[0.06] backdrop-blur-xl rounded-2xl overflow-hidden shadow-2xl border border-slate-200 dark:border-white/[0.1]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
@@ -145,7 +145,7 @@ export const CertificateLightbox: React.FC<CertificateLightboxProps> = ({
         </div>
 
         {/* Right Side: Detailed Metadata */}
-        <div className="w-full lg:w-96 p-6 flex flex-col justify-between overflow-y-auto bg-slate-50 dark:bg-[#111726] border-t lg:border-t-0 lg:border-l border-slate-200 dark:border-slate-800">
+        <div className="w-full lg:w-96 p-6 flex flex-col justify-between overflow-y-auto bg-slate-50 dark:bg-[#221e29]/90 backdrop-blur-xl border-t lg:border-t-0 lg:border-l border-slate-200 dark:border-white/[0.1]">
           <div>
             <div className="flex items-center gap-2 mb-3">
               <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 border border-cyan-500/20">
@@ -209,7 +209,7 @@ export const CertificateLightbox: React.FC<CertificateLightboxProps> = ({
           </div>
 
           {/* Action Links & Pager */}
-          <div className="pt-6 border-t border-slate-200 dark:border-slate-800 mt-6 space-y-3">
+          <div className="pt-6 border-t border-slate-200 dark:border-white/[0.1] mt-6 space-y-3">
             {cert.pdfUrl && (
               <a
                 href={cert.pdfUrl}

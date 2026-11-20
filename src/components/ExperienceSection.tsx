@@ -6,25 +6,25 @@ export const ExperienceSection: React.FC<{ onOpenCert: (certId: string) => void 
   const { experience } = portfolioData;
 
   return (
-    <section id="experience" className="py-20 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="experience" className="py-16 relative">
+      <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <span className="text-xs uppercase tracking-widest font-bold text-cyan-600 dark:text-cyan-400">
+        <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
+          <span className="text-xs uppercase tracking-widest font-bold text-amber-600 dark:text-amber-300">
             Professional Experience
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-white tracking-tight">
             Government Tech Residency & Engineering
           </h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-cyan-500 to-indigo-500 mx-auto rounded-full" />
+          <div className="w-16 h-1 bg-gradient-to-r from-amber-300 to-rose-400 mx-auto rounded-full" />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
           {experience.map((exp) => (
             <div
               key={exp.id}
-              className="relative p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#111726] border border-slate-200 dark:border-slate-800 shadow-xl flex flex-col justify-between gap-6 hover:border-cyan-500/40 transition-colors"
+              className="bento-card relative p-6 sm:p-8 flex flex-col justify-between gap-6"
             >
               <div className="space-y-6">
                 {/* Top Title Bar */}

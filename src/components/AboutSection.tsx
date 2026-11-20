@@ -7,8 +7,8 @@ export const AboutSection: React.FC = () => {
   const { personal, education, profileImages } = portfolioData;
 
   return (
-    <section id="about" className="py-20 relative bg-slate-100/60 dark:bg-[#0c101a]/70 border-y border-slate-200/80 dark:border-slate-800/80">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-20 relative bg-slate-100/60 dark:bg-[#1c1922]/70 border-y border-slate-200/80 dark:border-white/[0.1]/80">
+      <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
@@ -26,7 +26,7 @@ export const AboutSection: React.FC = () => {
           {/* Left Column: Visual Story Cards */}
           <div className="lg:col-span-5 space-y-6">
             <TiltCard maxTilt={6}>
-              <div className="relative rounded-2xl overflow-hidden bg-slate-900 shadow-xl border border-slate-200 dark:border-slate-800 group">
+              <div className="relative rounded-2xl overflow-hidden bg-slate-900 shadow-xl border border-slate-200 dark:border-white/[0.1] group">
                 <img
                   src={profileImages.casualAbout}
                   alt="Teofilo Mirasol Jr. - Casual Portrait"
@@ -43,7 +43,7 @@ export const AboutSection: React.FC = () => {
 
             {/* Quick mini-cards */}
             <div className="grid grid-cols-2 gap-4">
-              <div className="p-4 rounded-xl bg-white dark:bg-[#111726] border border-slate-200 dark:border-slate-800 shadow-sm flex items-center gap-3">
+              <div className="p-4 rounded-xl bento-card shadow-sm flex items-center gap-3">
                 <div className="p-2.5 rounded-lg bg-cyan-500/10 text-cyan-500">
                   <Landmark className="w-5 h-5" />
                 </div>
@@ -53,7 +53,7 @@ export const AboutSection: React.FC = () => {
                 </div>
               </div>
 
-              <div className="p-4 rounded-xl bg-white dark:bg-[#111726] border border-slate-200 dark:border-slate-800 shadow-sm flex items-center gap-3">
+              <div className="p-4 rounded-xl bento-card shadow-sm flex items-center gap-3">
                 <div className="p-2.5 rounded-lg bg-indigo-500/10 text-indigo-500">
                   <Award className="w-5 h-5" />
                 </div>
@@ -114,7 +114,7 @@ export const AboutSection: React.FC = () => {
                 {education.map((edu) => (
                   <div
                     key={edu.id}
-                    className="p-4 rounded-xl bg-white dark:bg-[#111726] border border-slate-200 dark:border-slate-800 shadow-sm space-y-1.5"
+                    className="p-4 rounded-xl bento-card shadow-sm space-y-1.5"
                   >
                     <div className="flex flex-wrap items-center justify-between gap-2">
                       <h4 className="font-bold text-slate-900 dark:text-white text-sm sm:text-base">
