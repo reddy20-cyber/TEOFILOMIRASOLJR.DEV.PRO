@@ -51,7 +51,7 @@ export const HeroSection: React.FC = () => {
   return (
     <section
       id="overview"
-      className="relative pt-24 sm:pt-28 pb-12 overflow-hidden"
+      className="relative pt-24 sm:pt-28 pb-12 overflow-x-clip"
     >
       {/* Subtle 3D Interactive Three.js Background */}
       <div className="opacity-35 dark:opacity-45 pointer-events-none">
@@ -60,120 +60,123 @@ export const HeroSection: React.FC = () => {
 
       <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6">
         {/* TOP BENTO GRID: Hero Spotlight (8 cols) + Right Widgets (4 cols) */}
-        <div className="grid grid-cols-1 xl:grid-cols-12 gap-6 items-stretch">
-          {/* LEFT 8 COLS: Main Hero Spotlight Bento Card */}
-          <div className="xl:col-span-8 bento-card relative overflow-hidden p-6 sm:p-8 lg:p-10 flex flex-col justify-between min-h-[470px]">
-            {/* Warm subtle inner ambient glow */}
-            <div className="pointer-events-none absolute -top-24 -right-24 w-80 h-80 rounded-full bg-amber-300/10 dark:bg-amber-400/10 blur-3xl" />
-            <div className="pointer-events-none absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-violet-400/10 dark:bg-violet-400/10 blur-3xl" />
+        <div className="grid grid-cols-1 xl:grid-cols-12 gap-6 items-stretch md:pt-8">
+          {/* LEFT 8 COLS: Main Hero Spotlight Bento Card with Pop-Out Cutout (Exact Reference Style) */}
+          <div className="xl:col-span-8 bento-card relative overflow-visible p-6 sm:p-8 lg:p-10 flex flex-col justify-between min-h-[450px] lg:min-h-[470px]">
+            {/* Clipped Warm Inner Ambient Glows */}
+            <div className="pointer-events-none absolute inset-0 rounded-[28px] overflow-hidden">
+              <div className="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-amber-300/10 dark:bg-amber-400/12 blur-3xl" />
+              <div className="absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-violet-400/10 dark:bg-violet-400/12 blur-3xl" />
+            </div>
 
-            {/* Upper Hero Content: Left Copy + Right Portrait */}
-            <div className="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-              <div className="md:col-span-7 space-y-4">
-                <div className="inline-flex flex-wrap items-center gap-2">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border border-emerald-500/25">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                    {personal.statusBadge}
-                  </span>
-                  <span className="text-xs font-medium text-zinc-500 dark:text-zinc-400">
-                    4th-Year BSIT • SEAIT
-                  </span>
-                </div>
+            {/* Desktop Pop-Out Transparent Portrait Cutout (breaks above top rim, sits behind bottom glass KPI bar) */}
+            <img
+              src={profileImages.casualCutout}
+              alt="Teofilo Bullos Mirasol Jr."
+              className="hidden md:block absolute right-3 lg:right-8 bottom-0 h-[500px] lg:h-[545px] w-auto object-contain object-bottom z-10 pointer-events-none select-none drop-shadow-[0_24px_40px_rgba(0,0,0,0.45)]"
+              loading="eager"
+            />
 
-                <div className="space-y-1.5">
-                  <h1 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold tracking-tight text-zinc-900 dark:text-white leading-[1.08]">
-                    {personal.name}
-                  </h1>
-                  <p className="text-sm sm:text-base font-medium text-zinc-600 dark:text-zinc-300">
-                    {personal.role}
-                  </p>
-                </div>
-
-                <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-300/90 leading-relaxed max-w-xl">
-                  Solo Full-Stack creator of{' '}
-                  <a
-                    href="https://scpio.media/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-bold text-zinc-900 dark:text-amber-300 underline decoration-amber-400/50 underline-offset-4 hover:decoration-amber-300"
-                  >
-                    scpio.media
-                  </a>{' '}
-                  (Province of South Cotabato OPIO RDTS Pro) and 486-hour DOST XII software engineering alum. Building resilient civic tech, microservices, and PostgreSQL systems.
-                </p>
-
-                <div className="flex items-center gap-2 text-xs text-zinc-500 dark:text-zinc-400">
-                  <MapPin className="w-3.5 h-3.5 text-amber-500 dark:text-amber-300 shrink-0" />
-                  <span>{personal.location}</span>
-                </div>
-
-                {/* Primary White Pill CTA + Download CV + Socials */}
-                <div className="pt-2 flex flex-wrap items-center gap-3">
-                  <a
-                    href="#contact"
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-zinc-900 dark:bg-white hover:bg-zinc-800 dark:hover:bg-zinc-100 text-white dark:text-zinc-950 font-bold text-sm shadow-lg transition-all hover:-translate-y-0.5"
-                  >
-                    <span>Start a Project</span>
-                    <ArrowUpRight className="w-4 h-4" />
-                  </a>
-
-                  <a
-                    href={personal.resumePdf}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-white/70 dark:bg-white/[0.08] hover:bg-white dark:hover:bg-white/[0.14] text-zinc-900 dark:text-white font-semibold text-sm border border-zinc-200 dark:border-white/[0.12] backdrop-blur-md transition-all"
-                  >
-                    <Download className="w-4 h-4" />
-                    <span>Download CV</span>
-                  </a>
-
-                  <div className="flex items-center gap-1.5 ml-1">
-                    <a
-                      href="https://github.com/reddy20-cyber"
-                      target="_blank"
-                      rel="noreferrer"
-                      aria-label="GitHub"
-                      className="w-10 h-10 rounded-xl bg-white/70 dark:bg-white/[0.07] hover:bg-white dark:hover:bg-white/[0.15] border border-zinc-200 dark:border-white/[0.1] flex items-center justify-center text-zinc-700 dark:text-zinc-200 transition-all"
-                    >
-                      <GithubIcon className="w-4 h-4" />
-                    </a>
-                    <a
-                      href="https://linkedin.com/in/teofilo-mirasol"
-                      target="_blank"
-                      rel="noreferrer"
-                      aria-label="LinkedIn"
-                      className="w-10 h-10 rounded-xl bg-white/70 dark:bg-white/[0.07] hover:bg-white dark:hover:bg-white/[0.15] border border-zinc-200 dark:border-white/[0.1] flex items-center justify-center text-zinc-700 dark:text-zinc-200 transition-all"
-                    >
-                      <LinkedinIcon className="w-4 h-4" />
-                    </a>
-                    <a
-                      href="mailto:teofilomirasoljr.dost@gmail.com"
-                      aria-label="Email"
-                      className="w-10 h-10 rounded-xl bg-white/70 dark:bg-white/[0.07] hover:bg-white dark:hover:bg-white/[0.15] border border-zinc-200 dark:border-white/[0.1] flex items-center justify-center text-zinc-700 dark:text-zinc-200 transition-all"
-                    >
-                      <Mail className="w-4 h-4" />
-                    </a>
-                  </div>
-                </div>
+            {/* Upper Hero Content: Left Copy (gives room on right for Pop-Out Cutout) */}
+            <div className="relative z-20 md:max-w-[62%] lg:max-w-[60%] space-y-4">
+              <div className="inline-flex flex-wrap items-center gap-2">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border border-emerald-500/25">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                  {personal.statusBadge}
+                </span>
+                <span className="text-xs font-medium text-zinc-500 dark:text-zinc-400">
+                  4th-Year BSIT • SEAIT
+                </span>
               </div>
 
-              {/* Right Portrait Spotlight */}
-              <div className="md:col-span-5 flex justify-center md:justify-end">
-                <div className="relative w-52 sm:w-60 md:w-64 lg:w-72">
-                  <div className="relative rounded-[26px] overflow-hidden border border-white/20 shadow-2xl bg-zinc-900/40">
-                    <img
-                      src={profileImages.heroAvatar}
-                      alt="Teofilo Bullos Mirasol Jr."
-                      className="w-full aspect-[4/4.5] object-cover object-top"
-                      loading="eager"
-                    />
-                    <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-[#1a1720]/80 via-[#1a1720]/25 to-transparent" />
-                  </div>
+              <div className="space-y-1.5">
+                <h1 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold tracking-tight text-zinc-900 dark:text-white leading-[1.08]">
+                  {personal.name}
+                </h1>
+                <p className="text-sm sm:text-base font-medium text-zinc-600 dark:text-zinc-300">
+                  {personal.role}
+                </p>
+              </div>
+
+              <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-300/90 leading-relaxed max-w-lg">
+                Solo Full-Stack creator of{' '}
+                <a
+                  href="https://scpio.media/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold text-zinc-900 dark:text-amber-300 underline decoration-amber-400/50 underline-offset-4 hover:decoration-amber-300"
+                >
+                  scpio.media
+                </a>{' '}
+                (Province of South Cotabato OPIO RDTS Pro) and 486-hour DOST XII software engineering alum. Building resilient civic tech, microservices, and PostgreSQL systems.
+              </p>
+
+              <div className="flex items-center gap-2 text-xs text-zinc-500 dark:text-zinc-400">
+                <MapPin className="w-3.5 h-3.5 text-amber-500 dark:text-amber-300 shrink-0" />
+                <span>{personal.location}</span>
+              </div>
+
+              {/* Primary White Pill CTA + Download CV + Socials */}
+              <div className="pt-2 flex flex-wrap items-center gap-3">
+                <a
+                  href="#contact"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-zinc-900 dark:bg-white hover:bg-zinc-800 dark:hover:bg-zinc-100 text-white dark:text-zinc-950 font-bold text-sm shadow-lg transition-all hover:-translate-y-0.5"
+                >
+                  <span>Start a Project</span>
+                  <ArrowUpRight className="w-4 h-4" />
+                </a>
+
+                <a
+                  href={personal.resumePdf}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-white/70 dark:bg-white/[0.08] hover:bg-white dark:hover:bg-white/[0.14] text-zinc-900 dark:text-white font-semibold text-sm border border-zinc-200 dark:border-white/[0.12] backdrop-blur-md transition-all"
+                >
+                  <Download className="w-4 h-4" />
+                  <span>Download CV</span>
+                </a>
+
+                <div className="flex items-center gap-1.5 ml-1">
+                  <a
+                    href="https://github.com/reddy20-cyber"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="GitHub"
+                    className="w-10 h-10 rounded-xl bg-white/70 dark:bg-white/[0.07] hover:bg-white dark:hover:bg-white/[0.15] border border-zinc-200 dark:border-white/[0.1] flex items-center justify-center text-zinc-700 dark:text-zinc-200 transition-all"
+                  >
+                    <GithubIcon className="w-4 h-4" />
+                  </a>
+                  <a
+                    href="https://linkedin.com/in/teofilo-mirasol"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="LinkedIn"
+                    className="w-10 h-10 rounded-xl bg-white/70 dark:bg-white/[0.07] hover:bg-white dark:hover:bg-white/[0.15] border border-zinc-200 dark:border-white/[0.1] flex items-center justify-center text-zinc-700 dark:text-zinc-200 transition-all"
+                  >
+                    <LinkedinIcon className="w-4 h-4" />
+                  </a>
+                  <a
+                    href="mailto:teofilomirasoljr.dost@gmail.com"
+                    aria-label="Email"
+                    className="w-10 h-10 rounded-xl bg-white/70 dark:bg-white/[0.07] hover:bg-white dark:hover:bg-white/[0.15] border border-zinc-200 dark:border-white/[0.1] flex items-center justify-center text-zinc-700 dark:text-zinc-200 transition-all"
+                  >
+                    <Mail className="w-4 h-4" />
+                  </a>
                 </div>
               </div>
             </div>
 
-            {/* Bottom Floating Frosted Glass KPI Strip (Signature Reference Element) */}
+            {/* Mobile Portrait Cutout */}
+            <div className="md:hidden relative z-10 flex justify-center mt-6 -mb-10">
+              <img
+                src={profileImages.casualCutout}
+                alt="Teofilo Bullos Mirasol Jr."
+                className="h-72 w-auto object-contain object-bottom drop-shadow-[0_18px_30px_rgba(0,0,0,0.4)]"
+                loading="eager"
+              />
+            </div>
+
+            {/* Bottom Floating Frosted Glass KPI Strip overlaid across the lower cutout (Signature Reference Element) */}
             <div className="relative z-20 mt-6 sm:mt-8 p-4 sm:p-5 rounded-[22px] bg-white/80 dark:bg-white/[0.08] backdrop-blur-2xl border border-zinc-200/80 dark:border-white/[0.14] shadow-xl">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 flex-1">
