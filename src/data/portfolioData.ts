@@ -171,6 +171,7 @@ export const portfolioData = {
     heroAvatar: "/assets/profile/formal-headshot.webp",
     heroAvatarFallback: "/assets/profile/formal-headshot.png",
     casualAbout: "/assets/profile/casual-portrait-flowers.webp",
+    casualCutout: "/assets/profile/casual-portrait-cutout.webp",
     barongPodium: "/assets/profile/barong-podium-fullbody.webp",
     barongPnhrs: "/assets/profile/barong-pnhrs-stage.webp",
     photographer: "/assets/gallery/photographer-editor.webp",
