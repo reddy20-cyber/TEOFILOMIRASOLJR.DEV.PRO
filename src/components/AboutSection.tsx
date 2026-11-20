@@ -23,33 +23,39 @@ export const AboutSection: React.FC = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           
-          {/* Left Column: Centered Pop-Out Formal Suit Cutout Card */}
+          {/* Left Column: Pop-Out Formal Suit Cutout Card with Left Editorial Copy */}
           <div className="lg:col-span-5 space-y-6 pt-12 sm:pt-16">
             <div className="bento-card relative h-[350px] sm:h-[390px] overflow-visible group">
-              {/* Clipped Inner Ambient Glass Backdrop (Zero overlapping text behind portrait) */}
+              {/* Clipped Inner Ambient Glass Backdrop + Left Editorial Copy */}
               <div className="absolute inset-0 rounded-[28px] overflow-hidden pointer-events-none">
                 <div className="absolute -top-16 -left-16 w-56 h-56 rounded-full bg-amber-400/15 blur-3xl" />
                 <div className="absolute bottom-8 right-6 w-52 h-52 rounded-full bg-rose-400/15 blur-3xl" />
+                <div className="p-5 sm:p-6 max-w-[45%] space-y-2 relative z-10">
+                  <span className="inline-block px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-white/70 dark:bg-white/[0.1] text-zinc-700 dark:text-amber-300 border border-zinc-200 dark:border-white/[0.12]">
+                    BSIT • 4th Year
+                  </span>
+                  <p className="text-lg sm:text-xl font-extrabold text-zinc-900 dark:text-white leading-snug">
+                    Civic Tech &amp; Full-Stack Builder
+                  </p>
+                  <p className="text-[11px] text-zinc-500 dark:text-zinc-300/80 leading-relaxed">
+                    SEAIT • DOST XII • South Cotabato
+                  </p>
+                </div>
               </div>
 
-              {/* Centered Pop-Out Formal Suit Cutout breaking cleanly above top border */}
+              {/* Right-aligned Pop-Out Formal Suit Cutout clear of left text */}
               <img
                 src={profileImages.formalCutout}
                 alt="Teofilo Bullos Mirasol Jr. - Formal Cutout Portrait"
-                className="absolute left-1/2 -translate-x-1/2 bottom-0 h-[385px] sm:h-[435px] w-auto max-w-none object-contain object-bottom drop-shadow-[0_22px_35px_rgba(0,0,0,0.45)] group-hover:scale-[1.03] transition-transform duration-500 pointer-events-none select-none z-10"
+                className="absolute -right-2 sm:-right-3 bottom-0 h-[320px] sm:h-[365px] w-auto max-w-none object-contain object-bottom drop-shadow-[0_22px_35px_rgba(0,0,0,0.45)] group-hover:scale-[1.03] transition-transform duration-500 pointer-events-none select-none z-10"
                 loading="lazy"
               />
 
               {/* Bottom Floating Frosted Glass Info Strip */}
               <div className="absolute inset-x-4 bottom-4 z-20 p-4 rounded-[20px] bg-white/85 dark:bg-[#1e1b26]/80 backdrop-blur-2xl border border-zinc-200/80 dark:border-white/[0.16] shadow-xl">
-                <div className="flex items-center justify-between gap-2 mb-1">
-                  <span className="text-[10px] uppercase tracking-widest text-amber-600 dark:text-amber-300 font-bold">
-                    Tampakan, South Cotabato
-                  </span>
-                  <span className="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-zinc-900/10 dark:bg-white/[0.12] text-zinc-700 dark:text-amber-300 border border-zinc-200 dark:border-white/[0.12]">
-                    BSIT • 4th Year
-                  </span>
-                </div>
+                <span className="text-[10px] uppercase tracking-widest text-amber-600 dark:text-amber-300 font-bold">
+                  Tampakan, South Cotabato
+                </span>
                 <h3 className="text-base sm:text-lg font-extrabold text-zinc-900 dark:text-white leading-tight">
                   Teofilo Bullos Mirasol Jr.
                 </h3>
