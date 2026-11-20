@@ -347,7 +347,7 @@ export const portfolioData = {
         "Containerized with Docker Compose for rapid on-premise government deployment.",
       ],
       tags: ["React.js", "Node.js", "Express.js", "PostgreSQL", "Docker", "REST APIs", "pgAdmin", "Civic Tech"],
-      image: "/assets/gallery/dost-hardware-troubleshooting.webp",
+      image: "/assets/projects/dost-govchat.webp",
       architectureDetails: "Distributed React frontend communicating with microservice container over authenticated REST & WebSockets, backed by schema-migrated PostgreSQL with data auditing.",
     },
     {
