@@ -411,7 +411,7 @@ export const portfolioData = {
         "Integrates local filesystem caching and offline synchronization.",
       ],
       tags: ["Electron", "React.js", "Node.js", "iOS/Android Web-Wrappers", "Cross-Platform"],
-      image: "/assets/profile/casual-portrait-flowers.webp",
+      image: "/assets/projects/cross-platform-apps.webp",
     },
   ] as ProjectItem[],
 
