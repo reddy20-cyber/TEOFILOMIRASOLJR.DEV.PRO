@@ -170,6 +170,7 @@ export const portfolioData = {
   profileImages: {
     heroAvatar: "/assets/profile/formal-headshot.webp",
     heroAvatarFallback: "/assets/profile/formal-headshot.png",
+    formalCutout: "/assets/profile/formal-headshot-cutout.webp",
     casualAbout: "/assets/profile/casual-portrait-flowers.webp",
     casualCutout: "/assets/profile/casual-portrait-cutout.webp",
     barongPodium: "/assets/profile/barong-podium-fullbody.webp",

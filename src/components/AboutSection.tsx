@@ -23,50 +23,48 @@ export const AboutSection: React.FC = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           
-          {/* Left Column: Pop-Out Frosted Glass Cutout Card (Reference UI Style) */}
+          {/* Left Column: Pop-Out Frosted Glass Cutout Card (No Clipping!) */}
           <div className="lg:col-span-5 space-y-6 pt-12 sm:pt-16">
-            <TiltCard maxTilt={5}>
-              <div className="bento-card relative h-[350px] sm:h-[390px] overflow-visible group">
-                {/* Clipped Inner Ambient Glass Backdrop */}
-                <div className="absolute inset-0 rounded-[28px] overflow-hidden pointer-events-none">
-                  <div className="absolute -top-16 -left-16 w-56 h-56 rounded-full bg-amber-400/15 blur-3xl" />
-                  <div className="absolute bottom-8 right-6 w-52 h-52 rounded-full bg-rose-400/15 blur-3xl" />
-                  {/* Left-side subtle editorial copy inside glass card */}
-                  <div className="p-6 sm:p-7 max-w-[55%] space-y-2 relative z-10">
-                    <span className="inline-block px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-white/70 dark:bg-white/[0.1] text-zinc-700 dark:text-amber-300 border border-zinc-200 dark:border-white/[0.12]">
-                      BSIT • 4th Year
-                    </span>
-                    <p className="text-xl sm:text-2xl font-extrabold text-zinc-900 dark:text-white leading-tight">
-                      Civic Tech &amp; Full-Stack Builder
-                    </p>
-                    <p className="text-xs text-zinc-500 dark:text-zinc-300/80">
-                      SEAIT • DOST XII • South Cotabato
-                    </p>
-                  </div>
-                </div>
-
-                {/* Pop-Out Transparent Portrait Cutout breaking above top border */}
-                <img
-                  src={profileImages.casualCutout}
-                  alt="Teofilo Bullos Mirasol Jr. - Cutout Portrait"
-                  className="absolute right-2 sm:right-5 bottom-0 h-[430px] sm:h-[475px] w-auto object-contain object-bottom drop-shadow-[0_22px_35px_rgba(0,0,0,0.45)] group-hover:scale-[1.03] transition-transform duration-500 pointer-events-none select-none z-10"
-                  loading="lazy"
-                />
-
-                {/* Bottom Floating Frosted Glass Info Strip */}
-                <div className="absolute inset-x-4 bottom-4 z-20 p-4 rounded-[20px] bg-white/85 dark:bg-[#1e1b26]/75 backdrop-blur-2xl border border-zinc-200/80 dark:border-white/[0.16] shadow-xl">
-                  <span className="text-[10px] uppercase tracking-widest text-amber-600 dark:text-amber-300 font-bold">
-                    Tampakan, South Cotabato
+            <div className="bento-card relative h-[350px] sm:h-[390px] overflow-visible group">
+              {/* Clipped Inner Ambient Glass Backdrop */}
+              <div className="absolute inset-0 rounded-[28px] overflow-hidden pointer-events-none">
+                <div className="absolute -top-16 -left-16 w-56 h-56 rounded-full bg-amber-400/15 blur-3xl" />
+                <div className="absolute bottom-8 right-6 w-52 h-52 rounded-full bg-rose-400/15 blur-3xl" />
+                {/* Left-side subtle editorial copy inside glass card */}
+                <div className="p-6 sm:p-7 max-w-[52%] space-y-2 relative z-10">
+                  <span className="inline-block px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-white/70 dark:bg-white/[0.1] text-zinc-700 dark:text-amber-300 border border-zinc-200 dark:border-white/[0.12]">
+                    BSIT • 4th Year
                   </span>
-                  <h3 className="text-base sm:text-lg font-extrabold text-zinc-900 dark:text-white leading-tight">
-                    Teofilo Bullos Mirasol Jr.
-                  </h3>
-                  <p className="text-[11px] text-zinc-600 dark:text-zinc-300 line-clamp-1">
-                    BSIT Candidate @ South East Asian Institute of Technology, Inc.
+                  <p className="text-xl sm:text-2xl font-extrabold text-zinc-900 dark:text-white leading-tight">
+                    Civic Tech &amp; Full-Stack Builder
+                  </p>
+                  <p className="text-xs text-zinc-500 dark:text-zinc-300/80">
+                    SEAIT • DOST XII • South Cotabato
                   </p>
                 </div>
               </div>
-            </TiltCard>
+
+              {/* Pop-Out Formal Suit Cutout breaking cleanly above top border */}
+              <img
+                src={profileImages.formalCutout}
+                alt="Teofilo Bullos Mirasol Jr. - Formal Cutout Portrait"
+                className="absolute right-0 sm:right-2 bottom-0 h-[370px] sm:h-[420px] w-auto object-contain object-bottom drop-shadow-[0_22px_35px_rgba(0,0,0,0.45)] group-hover:scale-[1.03] transition-transform duration-500 pointer-events-none select-none z-10"
+                loading="lazy"
+              />
+
+              {/* Bottom Floating Frosted Glass Info Strip */}
+              <div className="absolute inset-x-4 bottom-4 z-20 p-4 rounded-[20px] bg-white/85 dark:bg-[#1e1b26]/75 backdrop-blur-2xl border border-zinc-200/80 dark:border-white/[0.16] shadow-xl">
+                <span className="text-[10px] uppercase tracking-widest text-amber-600 dark:text-amber-300 font-bold">
+                  Tampakan, South Cotabato
+                </span>
+                <h3 className="text-base sm:text-lg font-extrabold text-zinc-900 dark:text-white leading-tight">
+                  Teofilo Bullos Mirasol Jr.
+                </h3>
+                <p className="text-[11px] text-zinc-600 dark:text-zinc-300 line-clamp-1">
+                  BSIT Candidate @ South East Asian Institute of Technology, Inc.
+                </p>
+              </div>
+            </div>
 
             {/* Quick mini-cards */}
             <div className="grid grid-cols-2 gap-4">
