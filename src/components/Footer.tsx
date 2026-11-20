@@ -11,7 +11,7 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="pb-6 pt-4 relative">
+    <footer className="pb-24 lg:pb-6 pt-4 relative">
       <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bento-card p-6 sm:p-8 text-zinc-600 dark:text-zinc-400">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-6 border-b border-zinc-200/80 dark:border-white/[0.08]">

@@ -215,7 +215,7 @@ export const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
 
           {/* Mobile Glass Drawer */}
           {mobileMenuOpen && (
-            <div className="pointer-events-auto md:hidden mt-2.5 p-4 rounded-3xl bg-white/95 dark:bg-[#16141c]/95 backdrop-blur-2xl border border-zinc-200 dark:border-white/10 shadow-2xl space-y-1.5">
+            <div className="pointer-events-auto md:hidden mt-2.5 p-4 rounded-3xl bg-white/95 dark:bg-[#16141c]/95 backdrop-blur-2xl border border-zinc-200 dark:border-white/10 shadow-2xl space-y-2">
               <div className="grid grid-cols-2 gap-1.5">
                 {navLinks.map((link) => {
                   const Icon = link.icon;
@@ -224,32 +224,75 @@ export const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
                       key={link.id}
                       href={link.href}
                       onClick={() => setMobileMenuOpen(false)}
-                      className={`flex items-center gap-2.5 px-3 py-2.5 rounded-2xl text-sm font-semibold transition-all ${
+                      className={`flex items-center gap-2.5 px-3 py-2.5 rounded-2xl text-xs font-semibold transition-all ${
                         activeSection === link.id
                           ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-950'
                           : 'text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-white/[0.08]'
                       }`}
                     >
-                      <Icon className="w-4 h-4" />
+                      <Icon className="w-4 h-4 shrink-0" />
                       <span>{link.name}</span>
                     </a>
                   );
                 })}
               </div>
-              <div className="pt-2 flex gap-2">
+              <div className="pt-2 flex gap-2 border-t border-zinc-200/80 dark:border-white/[0.08]">
                 <a
                   href="#contact"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-2xl bg-zinc-900 dark:bg-white text-white dark:text-zinc-950 font-bold text-sm"
+                  className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-2xl bg-zinc-900 dark:bg-white text-white dark:text-zinc-950 font-bold text-xs"
                 >
                   <span>Hire Me</span>
                   <ArrowUpRight className="w-4 h-4" />
+                </a>
+                <a
+                  href={portfolioData.personal.resumePdf}
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="px-4 py-2.5 rounded-2xl bg-zinc-100 dark:bg-white/[0.08] text-zinc-800 dark:text-zinc-200 font-semibold text-xs flex items-center gap-1.5 border border-zinc-200 dark:border-white/[0.1]"
+                >
+                  <FileDown className="w-4 h-4" />
+                  <span>CV</span>
                 </a>
               </div>
             </div>
           )}
         </div>
       </header>
+
+      {/* Mobile Floating Pitch-Black Bottom Dock (Matches Desktop Floating Sidebar) */}
+      <nav
+        aria-label="Mobile Quick Navigation"
+        className="lg:hidden fixed bottom-3 left-3 right-3 z-40 max-w-md mx-auto"
+      >
+        <div className="flex items-center justify-around px-2 py-2 rounded-[22px] bg-[#09090b]/92 backdrop-blur-2xl border border-white/[0.12] shadow-[0_16px_40px_rgba(0,0,0,0.55)]">
+          {[
+            { id: 'overview', name: 'Home', href: '#overview', icon: LayoutGrid },
+            { id: 'experience', name: 'Work', href: '#experience', icon: Briefcase },
+            { id: 'projects', name: 'Projects', href: '#projects', icon: FolderKanban },
+            { id: 'certificates', name: 'Certs', href: '#certificates', icon: Award },
+            { id: 'contact', name: 'Hire', href: '#contact', icon: Mail },
+          ].map((item) => {
+            const Icon = item.icon;
+            const isActive = activeSection === item.id;
+            return (
+              <a
+                key={item.id}
+                href={item.href}
+                className={`flex flex-col items-center justify-center gap-0.5 px-3 py-1.5 rounded-2xl transition-all min-w-[56px] ${
+                  isActive
+                    ? 'bg-white/[0.16] text-white'
+                    : 'text-zinc-400 hover:text-white'
+                }`}
+              >
+                <Icon className="w-[18px] h-[18px]" />
+                <span className="text-[10px] font-semibold leading-none">{item.name}</span>
+              </a>
+            );
+          })}
+        </div>
+      </nav>
     </>
   );
 };

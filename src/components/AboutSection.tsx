@@ -23,21 +23,21 @@ export const AboutSection: React.FC = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           
-          {/* Left Column: Formal Suit Cutout Glass Card (Cleanly framed, zero overflow past card edges) */}
+          {/* Left Column: Formal Suit Cutout Glass Card (Cleanly framed on mobile & desktop) */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="bento-card relative h-[360px] sm:h-[395px] overflow-hidden group">
+            <div className="bento-card relative h-[310px] sm:h-[395px] overflow-hidden group">
               {/* Inner Ambient Glass Backdrop + Left Editorial Copy */}
               <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute -top-16 -left-16 w-56 h-56 rounded-full bg-amber-400/15 blur-3xl" />
                 <div className="absolute bottom-8 right-6 w-52 h-52 rounded-full bg-rose-400/15 blur-3xl" />
-                <div className="p-5 sm:p-6 max-w-[46%] space-y-2 relative z-10">
-                  <span className="inline-block px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-white/70 dark:bg-white/[0.1] text-zinc-700 dark:text-amber-300 border border-zinc-200 dark:border-white/[0.12]">
+                <div className="p-4 sm:p-6 max-w-[54%] sm:max-w-[46%] space-y-1.5 sm:space-y-2 relative z-10">
+                  <span className="inline-block px-2.5 py-0.5 sm:py-1 rounded-full text-[9px] sm:text-[10px] font-bold uppercase tracking-wider bg-white/70 dark:bg-white/[0.1] text-zinc-700 dark:text-amber-300 border border-zinc-200 dark:border-white/[0.12]">
                     BSIT • 4th Year
                   </span>
-                  <p className="text-lg sm:text-xl font-extrabold text-zinc-900 dark:text-white leading-snug">
+                  <p className="text-base sm:text-xl font-extrabold text-zinc-900 dark:text-white leading-snug">
                     Civic Tech &amp; Full-Stack Builder
                   </p>
-                  <p className="text-[11px] text-zinc-500 dark:text-zinc-300/80 leading-relaxed">
+                  <p className="text-[10px] sm:text-[11px] text-zinc-500 dark:text-zinc-300/80 leading-relaxed">
                     SEAIT • DOST XII • South Cotabato
                   </p>
                 </div>
@@ -47,7 +47,7 @@ export const AboutSection: React.FC = () => {
               <img
                 src={profileImages.formalCutout}
                 alt="Teofilo Bullos Mirasol Jr. - Formal Cutout Portrait"
-                className="absolute right-0 bottom-0 h-[330px] sm:h-[365px] w-auto max-w-none object-contain object-bottom drop-shadow-[0_18px_30px_rgba(0,0,0,0.45)] group-hover:scale-[1.03] transition-transform duration-500 pointer-events-none select-none z-10"
+                className="absolute -right-4 sm:right-0 bottom-0 h-[235px] sm:h-[365px] w-auto max-w-none object-contain object-bottom drop-shadow-[0_18px_30px_rgba(0,0,0,0.45)] group-hover:scale-[1.03] transition-transform duration-500 pointer-events-none select-none z-10"
                 loading="lazy"
               />
 

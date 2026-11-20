@@ -52,7 +52,7 @@ export const HeroSection: React.FC = () => {
   return (
     <section
       id="overview"
-      className="relative pt-24 sm:pt-28 pb-12 overflow-x-clip"
+      className="relative pt-20 sm:pt-28 pb-10 sm:pb-12 overflow-x-clip"
     >
       {/* Subtle 3D Interactive Three.js Background */}
       <div className="opacity-35 dark:opacity-45 pointer-events-none">
@@ -125,10 +125,10 @@ export const HeroSection: React.FC = () => {
               </div>
 
               {/* Primary White Pill CTA + Download CV + Socials */}
-              <div className="pt-2 flex flex-wrap items-center gap-3">
+              <div className="pt-2 flex flex-wrap items-center gap-2.5 sm:gap-3">
                 <a
                   href="#contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-zinc-900 dark:bg-white hover:bg-zinc-800 dark:hover:bg-zinc-100 text-white dark:text-zinc-950 font-bold text-sm shadow-lg transition-all hover:-translate-y-0.5"
+                  className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 rounded-2xl bg-zinc-900 dark:bg-white hover:bg-zinc-800 dark:hover:bg-zinc-100 text-white dark:text-zinc-950 font-bold text-xs sm:text-sm shadow-lg transition-all hover:-translate-y-0.5 whitespace-nowrap"
                 >
                   <span>Start a Project</span>
                   <ArrowUpRight className="w-4 h-4" />
@@ -138,13 +138,13 @@ export const HeroSection: React.FC = () => {
                   href={personal.resumePdf}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-white/70 dark:bg-white/[0.08] hover:bg-white dark:hover:bg-white/[0.14] text-zinc-900 dark:text-white font-semibold text-sm border border-zinc-200 dark:border-white/[0.12] backdrop-blur-md transition-all"
+                  className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-3 rounded-2xl bg-white/70 dark:bg-white/[0.08] hover:bg-white dark:hover:bg-white/[0.14] text-zinc-900 dark:text-white font-semibold text-xs sm:text-sm border border-zinc-200 dark:border-white/[0.12] backdrop-blur-md transition-all whitespace-nowrap"
                 >
                   <Download className="w-4 h-4" />
                   <span>Download CV</span>
                 </a>
 
-                <div className="flex items-center gap-1.5 ml-1">
+                <div className="w-full sm:w-auto flex items-center gap-2 sm:gap-1.5 sm:ml-1 pt-1 sm:pt-0">
                   <a
                     href="https://github.com/reddy20-cyber"
                     target="_blank"
@@ -304,7 +304,7 @@ export const HeroSection: React.FC = () => {
                   </span>
                 </div>
 
-                <div className="text-2xl sm:text-3xl font-extrabold tracking-tight text-emerald-600 dark:text-lime-300 leading-none">
+                <div className="text-xl sm:text-3xl font-extrabold tracking-tight text-emerald-600 dark:text-lime-300 leading-none truncate">
                   scpio.media
                 </div>
 
@@ -315,8 +315,8 @@ export const HeroSection: React.FC = () => {
               </div>
 
               {/* Right Thumbnail Preview Box (Matches Backpack preview box in reference) */}
-              <div className="w-28 sm:w-32 shrink-0 p-2 rounded-[20px] bg-zinc-100/90 dark:bg-white/[0.07] border border-zinc-200/80 dark:border-white/[0.1] flex flex-col items-center gap-1.5">
-                <div className="w-full h-20 rounded-xl overflow-hidden bg-zinc-900">
+              <div className="w-24 sm:w-32 shrink-0 p-1.5 sm:p-2 rounded-[18px] sm:rounded-[20px] bg-zinc-100/90 dark:bg-white/[0.07] border border-zinc-200/80 dark:border-white/[0.1] flex flex-col items-center gap-1.5">
+                <div className="w-full h-16 sm:h-20 rounded-xl overflow-hidden bg-zinc-900">
                   <img
                     src="/assets/projects/opio-rdts-pro.webp"
                     alt="OPIO RDTS Pro Preview"

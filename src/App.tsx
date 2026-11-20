@@ -52,7 +52,7 @@ export function App() {
   };
 
   return (
-    <div className="bento-canvas relative min-h-screen text-zinc-900 dark:text-zinc-100 transition-colors duration-300">
+    <div className="bento-canvas relative min-h-screen overflow-x-clip text-zinc-900 dark:text-zinc-100 transition-colors duration-300">
       {/* Animated initial preloader */}
       {loading && <Preloader onComplete={() => setLoading(false)} />}
 
