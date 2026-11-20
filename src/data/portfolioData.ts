@@ -395,8 +395,8 @@ export const portfolioData = {
         "Provides asynchronous event processing with Kafka and sub-millisecond query caches with Memcached.",
         "Self-hosted S3-compatible file storage with MinIO for municipal document archives.",
       ],
-      tags: ["Podman", "Kafka", "ZooKeeper", "MinIO", "Memcached", "Postfix", "PostgreSQL"],
-      image: "/assets/gallery/photographer-editor.webp",
+      tags: ["Podman", "Docker", "Kafka", "ZooKeeper", "MinIO", "Memcached", "Postfix", "PostgreSQL"],
+      image: "/assets/projects/civic-infra-podman.webp",
       architectureDetails: "Daemonless rootless Podman pods orchestrating event-driven microservices with distributed queuing and persistent object storage.",
     },
     {
