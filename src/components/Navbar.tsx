@@ -15,7 +15,6 @@ import {
   Image as ImageIcon,
   Mail,
   FileDown,
-  Globe,
 } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 
@@ -166,17 +165,6 @@ export const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
 
             {/* Right Dashboard Actions */}
             <div className="hidden md:flex items-center gap-2.5">
-              <a
-                href="https://scpio.media/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold bg-white/80 dark:bg-white/[0.07] hover:bg-white dark:hover:bg-white/[0.14] text-zinc-800 dark:text-zinc-200 border border-zinc-200/90 dark:border-white/[0.1] backdrop-blur-md transition-all"
-              >
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                <Globe className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400" />
-                <span>scpio.media</span>
-              </a>
-
               <button
                 onClick={toggleDarkMode}
                 aria-label="Toggle theme"
@@ -256,15 +244,6 @@ export const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
                 >
                   <span>Hire Me</span>
                   <ArrowUpRight className="w-4 h-4" />
-                </a>
-                <a
-                  href="https://scpio.media/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-4 py-2.5 rounded-2xl bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border border-emerald-500/30 font-semibold text-xs flex items-center gap-1.5"
-                >
-                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                  scpio.media
                 </a>
               </div>
             </div>
