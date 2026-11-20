@@ -611,15 +611,14 @@ export const portfolioData = {
       description: "Conferred for exemplary technical writing, system manual clarity, and publishing perfection across academic and technical publications.",
     },
     {
-      id: "badge-talong-community",
-      title: "Talong Community Champion Badge",
-      issuer: "Civic / Developer Community",
-      date: "2026",
-      image: "/assets/badges/cisco-security-connectivity.webp", // placeholder fallback
+      id: "badge-google-intro-to-gemini",
+      title: "Intro to Gemini (Foundational)",
+      issuer: "Google AI Educator Series",
+      date: "November 18, 2026",
+      image: "/assets/badges/google-intro-to-gemini.webp",
       category: "community",
-      accentColor: "#8b5cf6",
-      isPlaceholder: true,
-      description: "[PLACEHOLDER]: Dedicated badge slot reserved for Teofilo's 'Talong' series badges or community gamified honors. Drop the graphic into /public/assets/badges/ to replace this placeholder.",
+      accentColor: "#4285f4",
+      description: "Earned under the Google AI Educator Series, validating foundational proficiency in generative AI workflows, prompt engineering, and practical applications with Google Gemini.",
     },
   ] as BadgeItem[],
 

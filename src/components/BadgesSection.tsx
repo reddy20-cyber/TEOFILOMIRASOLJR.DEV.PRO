@@ -19,7 +19,7 @@ export const BadgesSection: React.FC = () => {
             Accredited Badges & Distinctions
           </h2>
           <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400">
-            Verified technical badges from Cisco Networking Academy and institutional honors.
+            Verified technical badges from Google AI, Cisco Networking Academy, and institutional honors.
           </p>
           <div className="w-16 h-1 bg-gradient-to-r from-cyan-500 to-indigo-500 mx-auto rounded-full" />
         </div>
@@ -50,10 +50,10 @@ export const BadgesSection: React.FC = () => {
                           <ShieldCheck className="w-3.5 h-3.5 text-cyan-500" />
                           Cisco Academy
                         </>
-                      ) : badge.isPlaceholder ? (
+                      ) : badge.category === 'community' ? (
                         <>
-                          <Sparkles className="w-3.5 h-3.5 text-purple-400" />
-                          Talong Series
+                          <Sparkles className="w-3.5 h-3.5 text-blue-500 dark:text-sky-400" />
+                          Google AI
                         </>
                       ) : (
                         <>
