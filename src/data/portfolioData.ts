@@ -51,6 +51,8 @@ export interface ProjectItem {
   githubUrl?: string;
   featured?: boolean;
   architectureDetails?: string;
+  launchDate?: string;
+  role?: string;
 }
 
 export interface ExperienceItem {
@@ -290,6 +292,25 @@ export const portfolioData = {
   ] as ExperienceItem[],
 
   projects: [
+    {
+      id: "opio-rdts-pro",
+      title: "OPIO RDTS Pro (scpio.media)",
+      subtitle: "Province of South Cotabato Request & Document Tracking System",
+      category: "Full-Stack",
+      featured: true,
+      role: "Solo Full-Stack Developer",
+      launchDate: "Launched Nov 17, 2026",
+      demoUrl: "https://scpio.media/",
+      description: "A live civic-tech web platform engineered solo from end to end for the Office of the Provincial Information Officer (OPIO) of the Provincial Government of South Cotabato. Digitizes official service requests, QR-coded acknowledgement receipts, real-time document tracking, multi-section workflows, and Client Satisfaction Measurement (CSM).",
+      impact: [
+        "Solely architected, developed, and launched the complete full-stack production system at scpio.media on November 17, 2026.",
+        "Streamlines official Letter of Request submission (upload or in-system letter generator) with QR-coded Official Acknowledgement Receipts and real-time Tracking Code status lookups.",
+        "Coordinates workflows across 4 OPIO divisions (Broadcasting, Creative & Research, Multimedia Production, Graphics & Publication) with a dedicated Staff/Admin Portal and CSM release workflow.",
+      ],
+      tags: ["Full-Stack", "Civic Tech", "Document Tracking", "QR Receipts", "Real-Time Status", "Staff Portal", "CSM Workflow", "Live Production"],
+      image: "/assets/projects/opio-rdts-pro.webp",
+      architectureDetails: "End-to-end public request portal & authenticated staff management system with unique tracking codes, QR-verified receipts, section routing, and Client Satisfaction Measurement.",
+    },
     {
       id: "dost-govchat",
       title: "DOST GOVCHAT",
