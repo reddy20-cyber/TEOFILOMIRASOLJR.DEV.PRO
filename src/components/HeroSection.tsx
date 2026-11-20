@@ -1,6 +1,7 @@
 import React from 'react';
 import { portfolioData } from '../data/portfolioData';
 import { ThreeHeroScene } from './ThreeHeroScene';
+import { HireMeMascot3D } from './HireMeMascot3D';
 import {
   ChevronRight,
   Download,
@@ -79,10 +80,17 @@ export const HeroSection: React.FC = () => {
 
             {/* Upper Hero Content: Left Copy (gives room on right for Pop-Out Cutout) */}
             <div className="relative z-20 md:max-w-[62%] lg:max-w-[60%] space-y-4">
-              <div className="inline-flex flex-wrap items-center gap-3">
-                <span className="text-xs font-semibold text-emerald-600 dark:text-emerald-400">
-                  {personal.statusBadge}
-                </span>
+              <div className="inline-flex flex-wrap items-center gap-2.5">
+                <a
+                  href="#contact"
+                  title="Hire Teofilo — Click to send a message!"
+                  className="inline-flex items-center gap-1.5 group"
+                >
+                  <HireMeMascot3D size={54} />
+                  <span className="text-xs sm:text-sm font-bold text-emerald-600 dark:text-emerald-400 group-hover:text-emerald-500 dark:group-hover:text-emerald-300 transition-colors">
+                    {personal.statusBadge}
+                  </span>
+                </a>
                 <span className="text-zinc-400 dark:text-zinc-600">•</span>
                 <span className="text-xs font-medium text-zinc-500 dark:text-zinc-400">
                   4th-Year BSIT • SEAIT
