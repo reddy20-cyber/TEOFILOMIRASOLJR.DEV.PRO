@@ -63,11 +63,13 @@ export interface ExperienceItem {
   location: string;
   period: string;
   hoursCompleted?: number;
+  badgeLabel?: string;
   type: string;
   summary: string;
   bulletPoints: string[];
   technologies: string[];
   certificateUrl?: string;
+  liveUrl?: string;
 }
 
 export interface EducationItem {
@@ -268,6 +270,26 @@ export const portfolioData = {
   ] as SkillCategory[],
 
   experience: [
+    {
+      id: "opio-south-cotabato-2026",
+      role: "Solo Full-Stack Software Developer (OPIO RDTS Pro)",
+      organization: "Office of the Provincial Information Officer (OPIO) – South Cotabato",
+      division: "Information Development Division (Powered by SEAIT – CICT)",
+      location: "Provincial Capitol Compound, Koronadal City, South Cotabato",
+      period: "Launched November 17, 2026",
+      badgeLabel: "Live Government System • Solo Full-Stack",
+      type: "Provincial Government Civic Tech Deployment",
+      summary: "Solely architected, developed, and deployed OPIO RDTS Pro (scpio.media), the official Request & Document Tracking System for the Office of the Provincial Information Officer of the Provincial Government of South Cotabato.",
+      bulletPoints: [
+        "Solely engineered the complete full-stack production platform (frontend, backend, database, and live deployment at scpio.media), launched on November 17, 2026.",
+        "Built an online Letter of Request workflow enabling provincial offices, barangays, schools, national agencies, and partners to upload signed letters or generate official letters inside the portal.",
+        "Implemented unique Tracking Code lookups and QR-coded Official Acknowledgement Receipts for transparent, real-time status monitoring from referral to completion.",
+        "Developed multi-section workflow routing and a Staff/Admin Portal coordinating 4 OPIO divisions: Broadcasting, Creative & Research (CRDS), Multimedia Production, and Graphics & Publication.",
+        "Integrated the Client Satisfaction Measurement (CSM) and Release Form completion flow to support public service accountability and quality auditing.",
+      ],
+      technologies: ["Full-Stack", "Civic Tech", "Document Tracking", "QR Receipts", "Real-Time Status", "Staff Portal", "CSM Workflow"],
+      liveUrl: "https://scpio.media/",
+    },
     {
       id: "dost-ojt-2026",
       role: "Software Developer & Technical Writer (On-the-Job Training)",
