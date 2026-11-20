@@ -69,11 +69,11 @@ export const HeroSection: React.FC = () => {
               <div className="absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-violet-400/10 dark:bg-violet-400/12 blur-3xl" />
             </div>
 
-            {/* Desktop Pop-Out Transparent Portrait Cutout (breaks above top rim, sits behind bottom glass KPI bar) */}
+            {/* Desktop Pop-Out Transparent Portrait Cutout (large & prominent, breaking above top rim) */}
             <img
               src={profileImages.casualCutout}
               alt="Teofilo Bullos Mirasol Jr."
-              className="hidden md:block absolute right-3 lg:right-8 bottom-0 h-[500px] lg:h-[545px] w-auto object-contain object-bottom z-10 pointer-events-none select-none drop-shadow-[0_24px_40px_rgba(0,0,0,0.45)]"
+              className="hidden md:block absolute right-2 lg:right-6 bottom-0 h-[630px] lg:h-[680px] xl:h-[710px] w-auto max-w-none object-contain object-bottom z-10 pointer-events-none select-none drop-shadow-[0_28px_45px_rgba(0,0,0,0.5)]"
               loading="eager"
             />
 
