@@ -23,14 +23,14 @@ export const AboutSection: React.FC = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           
-          {/* Left Column: Pop-Out Formal Suit Cutout Card with Left Editorial Copy */}
-          <div className="lg:col-span-5 space-y-6 pt-12 sm:pt-16">
-            <div className="bento-card relative h-[350px] sm:h-[390px] overflow-visible group">
-              {/* Clipped Inner Ambient Glass Backdrop + Left Editorial Copy */}
-              <div className="absolute inset-0 rounded-[28px] overflow-hidden pointer-events-none">
+          {/* Left Column: Formal Suit Cutout Glass Card (Cleanly framed, zero overflow past card edges) */}
+          <div className="lg:col-span-5 space-y-6">
+            <div className="bento-card relative h-[360px] sm:h-[395px] overflow-hidden group">
+              {/* Inner Ambient Glass Backdrop + Left Editorial Copy */}
+              <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute -top-16 -left-16 w-56 h-56 rounded-full bg-amber-400/15 blur-3xl" />
                 <div className="absolute bottom-8 right-6 w-52 h-52 rounded-full bg-rose-400/15 blur-3xl" />
-                <div className="p-5 sm:p-6 max-w-[45%] space-y-2 relative z-10">
+                <div className="p-5 sm:p-6 max-w-[46%] space-y-2 relative z-10">
                   <span className="inline-block px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-white/70 dark:bg-white/[0.1] text-zinc-700 dark:text-amber-300 border border-zinc-200 dark:border-white/[0.12]">
                     BSIT • 4th Year
                   </span>
@@ -43,11 +43,11 @@ export const AboutSection: React.FC = () => {
                 </div>
               </div>
 
-              {/* Right-aligned Pop-Out Formal Suit Cutout clear of left text */}
+              {/* Formal Suit Cutout cleanly aligned inside rounded card */}
               <img
                 src={profileImages.formalCutout}
                 alt="Teofilo Bullos Mirasol Jr. - Formal Cutout Portrait"
-                className="absolute -right-2 sm:-right-3 bottom-0 h-[320px] sm:h-[365px] w-auto max-w-none object-contain object-bottom drop-shadow-[0_22px_35px_rgba(0,0,0,0.45)] group-hover:scale-[1.03] transition-transform duration-500 pointer-events-none select-none z-10"
+                className="absolute right-0 bottom-0 h-[330px] sm:h-[365px] w-auto max-w-none object-contain object-bottom drop-shadow-[0_18px_30px_rgba(0,0,0,0.45)] group-hover:scale-[1.03] transition-transform duration-500 pointer-events-none select-none z-10"
                 loading="lazy"
               />
 
