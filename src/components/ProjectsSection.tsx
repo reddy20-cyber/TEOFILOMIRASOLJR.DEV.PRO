@@ -69,8 +69,8 @@ export const ProjectsSection: React.FC = () => {
                       {project.category}
                     </span>
                     {project.demoUrl && (
-                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-bold bg-emerald-500/20 backdrop-blur-md text-emerald-300 border border-emerald-400/40">
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                      <span className="inline-flex items-center gap-1.5 px-1 text-[11px] font-bold text-emerald-400 drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">
+                        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_6px_rgba(52,211,153,0.9)]" />
                         Live
                       </span>
                     )}
