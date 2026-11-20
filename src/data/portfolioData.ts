@@ -364,7 +364,7 @@ export const portfolioData = {
         "Maintained high reliability across distributed databases with zero data loss during migrations.",
       ],
       tags: ["Node.js", "Express.js", "PostgreSQL", "Microservices", "Docker", "RESTful Architecture", "CORS Debugging"],
-      image: "/assets/profile/barong-podium-fullbody.webp",
+      image: "/assets/projects/dost-eis.webp",
       architectureDetails: "Independent microservices partitioned by domain boundary (Auth, Geo-Data, User Profile, Strategic Planning, FileService) with centralized API gateway.",
     },
     {
