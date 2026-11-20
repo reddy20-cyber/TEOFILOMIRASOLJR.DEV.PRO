@@ -80,8 +80,7 @@ export const HeroSection: React.FC = () => {
             {/* Upper Hero Content: Left Copy (gives room on right for Pop-Out Cutout) */}
             <div className="relative z-20 md:max-w-[62%] lg:max-w-[60%] space-y-4">
               <div className="inline-flex flex-wrap items-center gap-3">
-                <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-600 dark:text-emerald-400">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="text-xs font-semibold text-emerald-600 dark:text-emerald-400">
                   {personal.statusBadge}
                 </span>
                 <span className="text-zinc-400 dark:text-zinc-600">•</span>
@@ -224,8 +223,7 @@ export const HeroSection: React.FC = () => {
                     2026 Government & Production Milestones
                   </p>
                 </div>
-                <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-emerald-600 dark:text-emerald-400">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="text-[11px] font-bold text-emerald-600 dark:text-emerald-400">
                   Active
                 </span>
               </div>
